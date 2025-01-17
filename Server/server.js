@@ -1,10 +1,9 @@
-import express, { request } from 'express';
+import express from 'express';
 const app = express();
 require('dotenv').config();
 const port = process.env.PORT;
 app.use(express.json());
-import { Request , Response } from 'express';
-app.get('/' , (req : Request , res : Response) => {
+app.get('/' , (req,res) => {
     res.json({
         message: "Hello World!",
         status : 200
